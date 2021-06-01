@@ -114,7 +114,7 @@ struct SignIn : View {
             }
             VStack{
                 
-                Text("(or)").foregroundColor(Color.gray.opacity(0.5)).padding(.top,30)
+             //   Text("(or)").foregroundColor(Color.gray.opacity(0.5)).padding(.top,30)
                 
                 
                 HStack(spacing: 8){

@@ -17,7 +17,7 @@
 		D40322E926662CF5002D604B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D40322E726662CF5002D604B /* LaunchScreen.storyboard */; };
 		D40322F426662CF5002D604B /* TravelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322F326662CF5002D604B /* TravelAppTests.swift */; };
 		D40322FF26662CF5002D604B /* TravelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322FE26662CF5002D604B /* TravelAppUITests.swift */; };
-		D403231026663799002D604B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D403230F26663799002D604B /* GoogleService-Info.plist */; };
+		D424E7D72666626900478F65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D424E7D62666626900478F65 /* GoogleService-Info.plist */; };
 		D4770E18266642A70013B80F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4770E17266642A70013B80F /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,7 +57,7 @@
 		D40322FA26662CF5002D604B /* TravelAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40322FE26662CF5002D604B /* TravelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppUITests.swift; sourceTree = "<group>"; };
 		D403230026662CF5002D604B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D403230F26663799002D604B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D424E7D62666626900478F65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D4770E17266642A70013B80F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,7 +126,7 @@
 				D40322E226662CF5002D604B /* Assets.xcassets */,
 				D40322E726662CF5002D604B /* LaunchScreen.storyboard */,
 				D40322EA26662CF5002D604B /* Info.plist */,
-				D403230F26663799002D604B /* GoogleService-Info.plist */,
+				D424E7D62666626900478F65 /* GoogleService-Info.plist */,
 				D40322DF26662CF3002D604B /* TravelApp.xcdatamodeld */,
 				D40322E426662CF5002D604B /* Preview Content */,
 				D4770E17266642A70013B80F /* HomeView.swift */,
@@ -275,7 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D40322E926662CF5002D604B /* LaunchScreen.storyboard in Resources */,
-				D403231026663799002D604B /* GoogleService-Info.plist in Resources */,
+				D424E7D72666626900478F65 /* GoogleService-Info.plist in Resources */,
 				D40322E626662CF5002D604B /* Preview Assets.xcassets in Resources */,
 				D40322E326662CF5002D604B /* Assets.xcassets in Resources */,
 			);
