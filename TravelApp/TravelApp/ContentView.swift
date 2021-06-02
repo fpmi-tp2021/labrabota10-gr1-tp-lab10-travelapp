@@ -11,7 +11,7 @@ import FirebaseAuth
 
 
 struct ContentView: View {
-    //sandb_Fv1Dckjeh3WaWuiCBGhRKo9BOSooHSJ9DltVTZvW
+
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
     
     var body: some View {
@@ -113,9 +113,7 @@ struct SignIn : View {
                 Alert(title: Text("Error"), message: Text(self.message), dismissButton: .default(Text("Ok")))
             }
             VStack{
-                
-             //   Text("(or)").foregroundColor(Color.gray.opacity(0.5)).padding(.top,30)
-                
+
                 
                 HStack(spacing: 8){
                     
