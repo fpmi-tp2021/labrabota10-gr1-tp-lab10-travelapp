@@ -11,7 +11,7 @@ import FirebaseAuth
 
 
 struct ContentView: View {
-    
+    //sandb_Fv1Dckjeh3WaWuiCBGhRKo9BOSooHSJ9DltVTZvW
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
     
     var body: some View {
