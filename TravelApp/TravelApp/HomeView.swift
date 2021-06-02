@@ -51,7 +51,7 @@ struct HomeView: View {
                 }, label: {
                     Circle()
                         .frame(width: 45, height: 45)
-                        .foregroundColor(Color(.systemTeal))
+                        .foregroundColor(Color("mainColor"))
                         .overlay(Image(systemName: "magnifyingglass")
                                     .foregroundColor(.white))
                         .padding(.trailing)
