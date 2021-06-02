@@ -103,7 +103,7 @@ struct SignIn : View {
                     Text("Sign In").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
                     
                     
-                }.background(Color(.blue))
+                }.background(Color("mainColor"))
                 .clipShape(Capsule())
                 .padding(.top, 45)
                 
