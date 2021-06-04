@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		457FD98D266A4347007F0126 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FD98C266A4347007F0126 /* WalkthroughView.swift */; };
+		457FD992266A4615007F0126 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FD991266A4615007F0126 /* SettingView.swift */; };
+		457FD997266A4924007F0126 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FD996266A4924007F0126 /* SettingsCell.swift */; };
+		457FD9EB266A7A87007F0126 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FD9EA266A7A87007F0126 /* ReportView.swift */; };
+		457FDA23266AADB1007F0126 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457FDA22266AADB1007F0126 /* ContactView.swift */; };
 		73F313C34736B7A2C0B485CB /* Pods_TravelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DD6520AD4A58EEBDEBE5F2 /* Pods_TravelApp.framework */; };
 		D40322DA26662CF3002D604B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322D926662CF3002D604B /* AppDelegate.swift */; };
 		D40322DC26662CF3002D604B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322DB26662CF3002D604B /* SceneDelegate.swift */; };
@@ -42,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		457FD98C266A4347007F0126 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		457FD991266A4615007F0126 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; usesTabs = 0; };
+		457FD996266A4924007F0126 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		457FD9EA266A7A87007F0126 /* ReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportView.swift; sourceTree = "<group>"; };
+		457FDA22266AADB1007F0126 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
 		76DD6520AD4A58EEBDEBE5F2 /* Pods_TravelApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88936366549A35712A366BDB /* Pods-TravelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelApp.release.xcconfig"; path = "Target Support Files/Pods-TravelApp/Pods-TravelApp.release.xcconfig"; sourceTree = "<group>"; };
 		8FB54E4C60B990C301D6F272 /* Pods-TravelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelApp.debug.xcconfig"; path = "Target Support Files/Pods-TravelApp/Pods-TravelApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +149,11 @@
 				D47A22902667856D00D15E06 /* FindHotelsModel.swift */,
 				D483B87F266818B7000F9928 /* HotelCard.swift */,
 				D4C09F4126689E9000F95267 /* HotelsTableView.swift */,
+				457FD991266A4615007F0126 /* SettingView.swift */,
+				457FD996266A4924007F0126 /* SettingsCell.swift */,
+				457FD98C266A4347007F0126 /* WalkthroughView.swift */,
+				457FD9EA266A7A87007F0126 /* ReportView.swift */,
+				457FDA22266AADB1007F0126 /* ContactView.swift */,
 			);
 			path = TravelApp;
 			sourceTree = "<group>";
@@ -354,13 +369,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D40322DA26662CF3002D604B /* AppDelegate.swift in Sources */,
+				457FD992266A4615007F0126 /* SettingView.swift in Sources */,
+				457FD9EB266A7A87007F0126 /* ReportView.swift in Sources */,
 				D47A22912667856D00D15E06 /* FindHotelsModel.swift in Sources */,
+				457FDA23266AADB1007F0126 /* ContactView.swift in Sources */,
 				D4C09F4226689E9000F95267 /* HotelsTableView.swift in Sources */,
 				D40322E126662CF3002D604B /* TravelApp.xcdatamodeld in Sources */,
 				D483B880266818B7000F9928 /* HotelCard.swift in Sources */,
+				457FD98D266A4347007F0126 /* WalkthroughView.swift in Sources */,
 				D40322DC26662CF3002D604B /* SceneDelegate.swift in Sources */,
 				D4770E18266642A70013B80F /* HomeView.swift in Sources */,
 				D40322DE26662CF3002D604B /* ContentView.swift in Sources */,
+				457FD997266A4924007F0126 /* SettingsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

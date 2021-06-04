@@ -10,8 +10,10 @@ import SwiftUI
 struct WalkthroughView: View {
     
     @AppStorage("currentPage") var currrentPage = 1
+    
+    
     var body: some View {
-        if currrentPage > totalPages{
+        if currrentPage > 3 {
             HomeView()
         }
         else {
@@ -22,13 +24,13 @@ struct WalkthroughView: View {
 
 struct WalkthroughView_Previews: PreviewProvider {
     static var previews: some View {
-        WalkthroughView()
-            .preferredColorScheme(.light)
+        WalkthroughView().preferredColorScheme(.light)
     }
 }
 
 struct WalkthrougScreen: View {
     @AppStorage("currentPage") var currrentPage = 1
+    
     
     var body: some View {
         
