@@ -14,6 +14,8 @@ struct SettingView: View {
     @State var isPresented2 = false
     @State var isPresented3 = false
     @State var isPresented4 = false
+    @State var isPresented5 = false
+
     
     var body: some View {
         NavigationView {
@@ -21,13 +23,13 @@ struct SettingView: View {
             List {
                 Section {
                     Button(action: {
-                        self.isPresented1.toggle()
+                        self.isPresented5.toggle()
                         
                     }) {
                         SettingsCell(title: "Language", imgName: "globe", clr: Color("customBlack"))
                             .foregroundColor(Color("customBlack"))
-                    }.fullScreenCover(isPresented: $isPresented1, content: {
-                        WalkthroughView()
+                    }.fullScreenCover(isPresented: $isPresented5, content: {
+                        LanguageView()
                     })
                    
                 }
@@ -39,7 +41,7 @@ struct SettingView: View {
                         SettingsCell(title: "Navigation", imgName: "shuffle", clr: Color("customBlack"))
                             .foregroundColor(Color("customBlack"))
                     }.fullScreenCover(isPresented: $isPresented4, content: {
-                        WalkthroughView()
+                        WalkthroughView2()
                     })
                     Button(action: {
                         self.isPresented3.toggle()
@@ -98,13 +100,7 @@ struct SettingView: View {
                 
                 ,alignment: .bottom
             )
-            
-            
         }
-    }
-    
-    func showFeatures() {
-        WalkthroughView()
     }
 }
 

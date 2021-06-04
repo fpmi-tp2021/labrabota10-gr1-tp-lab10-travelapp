@@ -8,7 +8,11 @@
 import SwiftUI
 
 
+
+
 struct ReportView: View {
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var usersReport: String = ""
     @State var show = false
@@ -23,7 +27,7 @@ struct ReportView: View {
             }
             
             HStack{
-            Text("Reporting a bug").font(.title).fontWeight(.semibold).kerning(1.2)
+            Text("Reporting a bug".localized(language)).font(.title).fontWeight(.semibold).kerning(1.2)
            
             }
             
