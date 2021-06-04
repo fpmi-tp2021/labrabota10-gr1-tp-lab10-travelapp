@@ -8,22 +8,35 @@
 import Foundation
 import MapKit
 import CoreLocation
+import SwiftUI
 
-class HotelRequest
-{
-    var checkIn : String
-    var checkOut : String
+class HotelRequest: ObservableObject {
+    @Published var dataHasLoaded = false
+    @Published var searchData : [APIHotel] = []
+    
+    var checkIn : String = ""
+    var checkOut : String = ""
     var adults = 1
     var maxPrice = 1000
     var minPrice = 50
-    var city : String
+    var city : String = ""
     
     var latitude : String = ""
     var longitude : String = ""
     
     let dateFormatter = DateFormatter()
     
-    init(city: String, checkIn: Date, checkOut: Date, adults: Int = 1, maxPrice: Int = 1000, minPrice: Int = 50) {
+    var headers = [
+    "x-rapidapi-key": "80af74aef4msh2e995b15f6f92a2p1e4da5jsna06f38eba433",
+    "x-rapidapi-host": "hotels-com-provider.p.rapidapi.com"
+]
+}
+
+extension HotelRequest
+{
+    convenience init(city: String, checkIn: Date, checkOut: Date, adults: Int = 1, maxPrice: Int = 1000, minPrice: Int = 50) {
+        
+        self.init()
         
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
@@ -33,26 +46,20 @@ class HotelRequest
         self.adults = adults
         self.maxPrice = maxPrice
         self.minPrice = minPrice
-        
     }
-    
-    let headers = [
-        "x-rapidapi-key": "80af74aef4msh2e995b15f6f92a2p1e4da5jsna06f38eba433",
-        "x-rapidapi-host": "hotels-com-provider.p.rapidapi.com"
-    ]
     
     func getHotels() {
         
         getCoordinateFrom(address: city) { coordinate, error in
             guard let coordinate = coordinate, error == nil else { return }
-            // don't forget to update the UI from the main thread
+            
             DispatchQueue.main.async {
                 
                 self.latitude = coordinate.latitude.description
                 self.longitude = coordinate.longitude.description
                 
                 print(self.city , "  :  " , coordinate)
-        
+                
             }
         }
         
@@ -74,7 +81,20 @@ class HotelRequest
                     let jsonData = String(decoding: data!, as: UTF8.self)
                     let response = try! JSONDecoder().decode(APIResponse.self, from: jsonData.data(using: .utf8)!)
                     
-                    print(response.searchResults.totalCount as Any)
+                    print("\(jsonData)")
+                    guard (response.searchResults.results.count != 0) else {
+                        print("Failed")
+                        return
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.searchData = response.searchResults.results
+                        self.dataHasLoaded = true
+                        
+                        print("\(self.searchData.count)")
+                        print("\(response.searchResults.results.count)")
+                        print("\(response.searchResults)")
+                    }
                 }
             }
         })
@@ -97,15 +117,22 @@ struct APIResponse : Decodable
 struct APIResult : Decodable
 {
     let totalCount : Int?
-    var results : [APIHotel]
+    let results : [APIHotel]
 }
 
 struct APIHotel : Decodable
 {
-    let id : Int?
-    let name : String?
-    let starRating : Double?
+    let id : Int
+    let name : String
+    let starRating : Double
+    let landmarks : [APILandmarks]
     let ratePlan : APIRatePlan
+}
+
+struct APILandmarks : Decodable
+{
+    let label : String?
+    let distance : String?
 }
 
 struct APIRatePlan : Decodable
@@ -115,6 +142,6 @@ struct APIRatePlan : Decodable
 
 struct APIPrice : Decodable
 {
-    let current : String
+    let current : String?
     let exactCurrent : Double?
 }
