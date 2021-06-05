@@ -14,6 +14,7 @@ class RequestSettings: ObservableObject {
     @Published var adults = 1
     @Published var maxPrice = 300
     @Published var minPrice = 150
+    @Published var isEmpty = false
 }
 
 struct HomeView: View {
@@ -36,7 +37,13 @@ struct HomeView: View {
                         .offset(x: 12)
                     
                     Button(action: {
+                        
+                        if settings.city != "" && (settings.maxPrice > settings.minPrice) && (settings.checkIn < settings.checkOut){
+                        
                         self.showingSheet.toggle()
+                        } else {
+                            settings.isEmpty.toggle()
+                        }
                     }) {
                         Circle()
                             .frame(width: 45, height: 45)
@@ -45,8 +52,10 @@ struct HomeView: View {
                                         .foregroundColor(.white))
                             .padding(.trailing)
                             .offset(x: -5)
-                    }.fullScreenCover(isPresented: $showingSheet, content: {
-                        LoadView(hotels: HotelRequest(city: settings.city, checkIn: settings.checkIn, checkOut: settings.checkOut, adults: settings.adults, maxPrice: settings.maxPrice, minPrice: settings.minPrice))
+                    }.alert(isPresented: $settings.isEmpty, content: {
+                        Alert(title: Text("Failed"), message: Text("Input data is incorrect"), dismissButton: .default(Text("Ok")))
+                    }).fullScreenCover(isPresented: $showingSheet, content: {
+                       LoadView(hotels: HotelRequest(city: settings.city, checkIn: settings.checkIn, checkOut: settings.checkOut, adults: settings.adults, maxPrice: settings.maxPrice, minPrice: settings.minPrice))
                     })
                 }
 
