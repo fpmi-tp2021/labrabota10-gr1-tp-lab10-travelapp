@@ -10,9 +10,11 @@ import MapKit
 import CoreLocation
 import SwiftUI
 
-class HotelRequest: ObservableObject {
+class HotelRequest: ObservableObject
+{
     @Published var dataHasLoaded = false
     @Published var searchData : [APIHotel] = []
+    @Published var isEmpty = false
     
     var checkIn : String = ""
     var checkOut : String = ""
@@ -64,36 +66,45 @@ extension HotelRequest
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            
             let request = NSMutableURLRequest(url: NSURL(string: "https://hotels-com-provider.p.rapidapi.com/v1/hotels/nearby?locale=en_US&sort_order=STAR_RATING_HIGHEST_FIRST&latitude=\(self.latitude)&adults_number=\(self.adults)&checkout_date=\(self.checkOut)&currency=USD&checkin_date=\(self.checkIn)&longitude=\(self.longitude)&price_min=\(self.minPrice)&price_max=\(self.maxPrice)")! as URL,cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
         
         request.httpMethod = "GET"
-            request.allHTTPHeaderFields = self.headers
+        request.allHTTPHeaderFields = self.headers
         
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            
             if (error != nil) {
+                
                 print(error as Any)
+                
             } else {
+                
                 let httpResponse = response as? HTTPURLResponse
                 print(httpResponse as Any)
                 
                 do {
+                    
                     let jsonData = String(decoding: data!, as: UTF8.self)
                     let response = try! JSONDecoder().decode(APIResponse.self, from: jsonData.data(using: .utf8)!)
                     
-                    print("\(jsonData)")
                     guard (response.searchResults.results.count != 0) else {
+                        
                         print("Failed")
                         return
+                        
                     }
                     
                     DispatchQueue.main.async {
+                        
+                        if response.searchResults.results.count == 0 {
+                            self.isEmpty = true
+                        }
+                        
                         self.searchData = response.searchResults.results
                         self.dataHasLoaded = true
                         
-                        print("\(self.searchData.count)")
-                        print("\(response.searchResults.results.count)")
-                        print("\(response.searchResults)")
                     }
                 }
             }

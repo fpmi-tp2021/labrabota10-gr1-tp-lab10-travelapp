@@ -18,10 +18,16 @@
 		D40322F426662CF5002D604B /* TravelAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322F326662CF5002D604B /* TravelAppTests.swift */; };
 		D40322FF26662CF5002D604B /* TravelAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322FE26662CF5002D604B /* TravelAppUITests.swift */; };
 		D424E7D72666626900478F65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D424E7D62666626900478F65 /* GoogleService-Info.plist */; };
+		D44EEC12266A1D0E00E48131 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44EEC11266A1D0E00E48131 /* WalkthroughView.swift */; };
 		D4770E18266642A70013B80F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4770E17266642A70013B80F /* HomeView.swift */; };
 		D47A22912667856D00D15E06 /* FindHotelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47A22902667856D00D15E06 /* FindHotelsModel.swift */; };
 		D483B880266818B7000F9928 /* HotelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D483B87F266818B7000F9928 /* HotelCard.swift */; };
 		D4C09F4226689E9000F95267 /* HotelsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C09F4126689E9000F95267 /* HotelsTableView.swift */; };
+		D4FA2734266A4015008F4DA8 /* FindAirwaysModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA2733266A4015008F4DA8 /* FindAirwaysModel.swift */; };
+		D4FA2739266AC8DD008F4DA8 /* DatabaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA2738266AC8DD008F4DA8 /* DatabaseModel.swift */; };
+		D4FA273E266B0221008F4DA8 /* AirwaysTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA273D266B0221008F4DA8 /* AirwaysTableView.swift */; };
+		D4FA2743266B0310008F4DA8 /* AirwayCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA2742266B0310008F4DA8 /* AirwayCard.swift */; };
+		D4FA2748266B1755008F4DA8 /* GetOriginPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA2747266B1755008F4DA8 /* GetOriginPlace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +67,16 @@
 		D40322FE26662CF5002D604B /* TravelAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAppUITests.swift; sourceTree = "<group>"; };
 		D403230026662CF5002D604B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D424E7D62666626900478F65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D44EEC11266A1D0E00E48131 /* WalkthroughView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
 		D4770E17266642A70013B80F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D47A22902667856D00D15E06 /* FindHotelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindHotelsModel.swift; sourceTree = "<group>"; };
 		D483B87F266818B7000F9928 /* HotelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCard.swift; sourceTree = "<group>"; };
 		D4C09F4126689E9000F95267 /* HotelsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsTableView.swift; sourceTree = "<group>"; };
+		D4FA2733266A4015008F4DA8 /* FindAirwaysModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindAirwaysModel.swift; sourceTree = "<group>"; };
+		D4FA2738266AC8DD008F4DA8 /* DatabaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseModel.swift; sourceTree = "<group>"; };
+		D4FA273D266B0221008F4DA8 /* AirwaysTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirwaysTableView.swift; sourceTree = "<group>"; };
+		D4FA2742266B0310008F4DA8 /* AirwayCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirwayCard.swift; sourceTree = "<group>"; };
+		D4FA2747266B1755008F4DA8 /* GetOriginPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOriginPlace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +151,12 @@
 				D47A22902667856D00D15E06 /* FindHotelsModel.swift */,
 				D483B87F266818B7000F9928 /* HotelCard.swift */,
 				D4C09F4126689E9000F95267 /* HotelsTableView.swift */,
+				D44EEC11266A1D0E00E48131 /* WalkthroughView.swift */,
+				D4FA2733266A4015008F4DA8 /* FindAirwaysModel.swift */,
+				D4FA2738266AC8DD008F4DA8 /* DatabaseModel.swift */,
+				D4FA273D266B0221008F4DA8 /* AirwaysTableView.swift */,
+				D4FA2742266B0310008F4DA8 /* AirwayCard.swift */,
+				D4FA2747266B1755008F4DA8 /* GetOriginPlace.swift */,
 			);
 			path = TravelApp;
 			sourceTree = "<group>";
@@ -353,14 +371,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FA273E266B0221008F4DA8 /* AirwaysTableView.swift in Sources */,
 				D40322DA26662CF3002D604B /* AppDelegate.swift in Sources */,
 				D47A22912667856D00D15E06 /* FindHotelsModel.swift in Sources */,
 				D4C09F4226689E9000F95267 /* HotelsTableView.swift in Sources */,
 				D40322E126662CF3002D604B /* TravelApp.xcdatamodeld in Sources */,
 				D483B880266818B7000F9928 /* HotelCard.swift in Sources */,
+				D44EEC12266A1D0E00E48131 /* WalkthroughView.swift in Sources */,
+				D4FA2739266AC8DD008F4DA8 /* DatabaseModel.swift in Sources */,
 				D40322DC26662CF3002D604B /* SceneDelegate.swift in Sources */,
+				D4FA2743266B0310008F4DA8 /* AirwayCard.swift in Sources */,
+				D4FA2748266B1755008F4DA8 /* GetOriginPlace.swift in Sources */,
 				D4770E18266642A70013B80F /* HomeView.swift in Sources */,
 				D40322DE26662CF3002D604B /* ContentView.swift in Sources */,
+				D4FA2734266A4015008F4DA8 /* FindAirwaysModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
