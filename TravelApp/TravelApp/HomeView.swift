@@ -21,6 +21,7 @@ struct HomeView: View {
     
     @StateObject var settings = RequestSettings()
     @State private var showingSheet = false
+    @State private var isPresented = false
     
     var body: some View {
         
@@ -89,6 +90,20 @@ struct HomeView: View {
 
                 }
             }
+            
+            Button(action: {
+                self.isPresented.toggle()
+            }) {
+                
+                    
+                    Text("Home").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
+                    
+                    
+            }.fullScreenCover(isPresented: $isPresented, content: {
+                PersonalAccountView()
+            }).background(Color("mainColor"))
+                .clipShape(Capsule())
+                .padding(.top, 45)
         }.environmentObject(settings)
     }
 }

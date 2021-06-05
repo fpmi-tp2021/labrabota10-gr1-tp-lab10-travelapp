@@ -12,13 +12,15 @@ struct AirwaysLoadView : View {
     @ObservedObject var airways = AirwaysRequest()
     @State var carriers : [APICarriers]?
     @State var quotes : [APIQuotes]?
-    @State var isLoaded = false
+    
+    var name = ""
+    var price = ""
     
     var body: some View {
         
         Group {
             if airways.isLoaded {
-                AirwaysTableView(carriers: airways.carriers, quotes: airways.quotes, from: airways.cityFrom, to: airways.cityTo)
+                AirwaysTableView(carriers: airways.carriers, quotes: airways.quotes, from: airways.cityFrom, to: airways.cityTo, name: name, price: price)
             } else {
                 ProgressView()
             }
@@ -40,6 +42,9 @@ struct AirwaysTableView: View {
     var from : String
     var to : String
     
+    var name = ""
+    var price = ""
+    
     var body: some View {
         VStack {
             HStack{
@@ -54,7 +59,7 @@ struct AirwaysTableView: View {
             }
             
             NavigationView {
-                AirwaysTable(carriers: carriers, quotes: quotes, from: from, to: to)
+                AirwaysTable(carriers: carriers, quotes: quotes, from: from, to: to, name: name, price: price)
             }
             
         }
@@ -67,12 +72,17 @@ struct AirwaysTable : View {
     var quotes : [APIQuotes]
     var from : String
     var to : String
+    var name = ""
+    var price = ""
     
     var body: some View {
         
         List(0..<carriers.count) { i in
-            
-            AirwayCard(company: carriers[i].Name, price: quotes[i].MinPrice)
+            NavigationLink(
+                destination: ResultView(hotelName: name, hotelPrice: price, airwayCompany: carriers[i].Name, airwayPrice: quotes[i].MinPrice),
+                label: {
+                AirwayCard(company: carriers[i].Name, price: quotes[i].MinPrice)
+                })
             
         }.navigationBarTitleDisplayMode(.large)
         .toolbar {

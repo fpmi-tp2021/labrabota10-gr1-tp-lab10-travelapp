@@ -60,16 +60,16 @@ extension AirwaysRequest
                 do {
                     
                     let jsonData = String(decoding: data!, as: UTF8.self)
-                    let response = try! JSONDecoder().decode(APIAirwaysResponse.self, from: jsonData.data(using: .utf8)!)
+                    let response = try? JSONDecoder().decode(APIAirwaysResponse.self, from: jsonData.data(using: .utf8)!)
                     
                     DispatchQueue.main.async {
                         
-                        if response.Carriers.count == 0 {
+                        if response?.Carriers.count == 0 {
                             self.isEmpty = true
                         }
                         
-                        self.carriers = response.Carriers
-                        self.quotes = response.Quotes
+                        self.carriers = response?.Carriers ?? [APICarriers.init(Name: "---")]
+                        self.quotes = response?.Quotes ?? [APIQuotes.init(MinPrice: 0)]
                         self.isLoaded = true
                         
                     }

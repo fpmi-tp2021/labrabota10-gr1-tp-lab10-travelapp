@@ -64,16 +64,19 @@ struct TableView: View {
     var city : String
     var date : String
     
+    
     var body: some View {
-        List(0..<hotels.count) { i in
+        List(hotels) { hotel in
             NavigationLink(
-                destination: GetOriginPlace(cityTo: city, date: date),
+                destination: GetOriginPlace(cityTo: city, name: hotel.name ,price: hotel.ratePlan.price.current ?? "$--", date: date),
                 label: {
-                    HotelCard(stars: Int(hotels[i].starRating), name: hotels[i].name, distance: hotels[i].landmarks[0].distance ?? "--", price: hotels[i].ratePlan.price.current ?? "$---")
+                    HotelCard(stars: Int(hotel.starRating), name: hotel.name, distance: hotel.landmarks[0].distance ?? "--", price: hotel.ratePlan.price.current ?? "$---")
                 })
             
         }.navigationBarTitle("\(city) hotels")
     }
+    
+
 }
 
 struct HotelsTableView_Previews: PreviewProvider {

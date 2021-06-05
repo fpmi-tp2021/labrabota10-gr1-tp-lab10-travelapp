@@ -36,6 +36,8 @@
 		D4770E18266642A70013B80F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4770E17266642A70013B80F /* HomeView.swift */; };
 		D47A22912667856D00D15E06 /* FindHotelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47A22902667856D00D15E06 /* FindHotelsModel.swift */; };
 		D483B880266818B7000F9928 /* HotelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D483B87F266818B7000F9928 /* HotelCard.swift */; };
+		D4896710266B469300A723BC /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489670F266B469300A723BC /* ResultView.swift */; };
+		D4896748266B70D800A723BC /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4896747266B70D800A723BC /* PersonalAccountView.swift */; };
 		D4C09F4226689E9000F95267 /* HotelsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C09F4126689E9000F95267 /* HotelsTableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +100,8 @@
 		D4770E17266642A70013B80F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D47A22902667856D00D15E06 /* FindHotelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindHotelsModel.swift; sourceTree = "<group>"; };
 		D483B87F266818B7000F9928 /* HotelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCard.swift; sourceTree = "<group>"; };
+		D489670F266B469300A723BC /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		D4896747266B70D800A723BC /* PersonalAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
 		D4C09F4126689E9000F95267 /* HotelsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -161,6 +165,12 @@
 			isa = PBXGroup;
 			children = (
 				D40322D926662CF3002D604B /* AppDelegate.swift */,
+				4520E4C8266B3A820012537F /* GetOriginPlace.swift */,
+				4520E4DC266B3A9F0012537F /* FindAirwaysModel.swift */,
+				4520E4D7266B3A990012537F /* DatabaseModel.swift */,
+				4520E4D2266B3A940012537F /* AirwaysTableView.swift */,
+				D47A22902667856D00D15E06 /* FindHotelsModel.swift */,
+				D4C09F4126689E9000F95267 /* HotelsTableView.swift */,
 				D40322DB26662CF3002D604B /* SceneDelegate.swift */,
 				D40322DD26662CF3002D604B /* ContentView.swift */,
 				D40322E226662CF5002D604B /* Assets.xcassets */,
@@ -170,9 +180,8 @@
 				D40322DF26662CF3002D604B /* TravelApp.xcdatamodeld */,
 				D40322E426662CF5002D604B /* Preview Content */,
 				D4770E17266642A70013B80F /* HomeView.swift */,
-				D47A22902667856D00D15E06 /* FindHotelsModel.swift */,
+				4520E4CD266B3A8A0012537F /* AirwayCard.swift */,
 				D483B87F266818B7000F9928 /* HotelCard.swift */,
-				D4C09F4126689E9000F95267 /* HotelsTableView.swift */,
 				457FD991266A4615007F0126 /* SettingView.swift */,
 				457FD996266A4924007F0126 /* SettingsCell.swift */,
 				457FD98C266A4347007F0126 /* WalkthroughView.swift */,
@@ -180,14 +189,11 @@
 				457FDA22266AADB1007F0126 /* ContactView.swift */,
 				457FDA27266ABAD2007F0126 /* WalkthroughView2.swift */,
 				45E84930266AC98C00790E86 /* LanguageView.swift */,
-				4520E4C8266B3A820012537F /* GetOriginPlace.swift */,
-				4520E4DC266B3A9F0012537F /* FindAirwaysModel.swift */,
-				4520E4CD266B3A8A0012537F /* AirwayCard.swift */,
-				4520E4D7266B3A990012537F /* DatabaseModel.swift */,
-				4520E4D2266B3A940012537F /* AirwaysTableView.swift */,
 				45E8495C266AD2B500790E86 /* Localizable.strings */,
 				45F8D4F1266AD8C2008545EB /* LocalizationService.swift */,
 				45F8D546266ADB93008545EB /* String.swift */,
+				D489670F266B469300A723BC /* ResultView.swift */,
+				D4896747266B70D800A723BC /* PersonalAccountView.swift */,
 			);
 			path = TravelApp;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 			files = (
 				D40322DA26662CF3002D604B /* AppDelegate.swift in Sources */,
 				457FD992266A4615007F0126 /* SettingView.swift in Sources */,
+				D4896710266B469300A723BC /* ResultView.swift in Sources */,
 				457FD9EB266A7A87007F0126 /* ReportView.swift in Sources */,
 				D47A22912667856D00D15E06 /* FindHotelsModel.swift in Sources */,
 				45E84931266AC98C00790E86 /* LanguageView.swift in Sources */,
@@ -424,6 +431,7 @@
 				4520E4D8266B3A990012537F /* DatabaseModel.swift in Sources */,
 				4520E4C9266B3A820012537F /* GetOriginPlace.swift in Sources */,
 				D40322DC26662CF3002D604B /* SceneDelegate.swift in Sources */,
+				D4896748266B70D800A723BC /* PersonalAccountView.swift in Sources */,
 				D4770E18266642A70013B80F /* HomeView.swift in Sources */,
 				D40322DE26662CF3002D604B /* ContentView.swift in Sources */,
 				457FDA28266ABAD2007F0126 /* WalkthroughView2.swift in Sources */,
