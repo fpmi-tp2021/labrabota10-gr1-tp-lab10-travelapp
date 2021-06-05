@@ -36,7 +36,7 @@ struct ResultView: View {
             
             Spacer()
             Spacer()
-            
+            /*
             Button(action: {
                 saveData(hotelName: hotelName, hotelPrice: hotelPrice, airwayCompany: airwayCompany, airwayPrice: airwayPrice.description)
                 
@@ -52,7 +52,7 @@ struct ResultView: View {
             }).background(Color("mainColor"))
                 .clipShape(Capsule())
                 .padding(.top, 45)
-            
+            */
             Spacer()
         }
     }
@@ -60,12 +60,12 @@ struct ResultView: View {
     func saveData(hotelName: String, hotelPrice: String, airwayCompany: String, airwayPrice: String)
     {
         let userID : String = (FirebaseAuth.Auth.auth().currentUser?.uid)!
-        let docRef = database.document("\(userID)/hotel")
+        let docRef = database.document("\(userID)/reservation")
         
-        docRef.setData(["hotelName" : airwayCompany])
-        docRef.setData(["hotelPrice" : airwayPrice])
-        docRef.setData(["airwayCompany" : airwayCompany])
-        docRef.setData(["airwayPrice" : airwayPrice])
+        docRef.setData(["hotelName" : airwayCompany,
+                        "hotelPrice" : airwayPrice,
+                        "airwayCompany" : airwayCompany,
+                        "airwayPrice" : airwayPrice])
     }
 }
 

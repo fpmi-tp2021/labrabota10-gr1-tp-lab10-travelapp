@@ -32,16 +32,20 @@ struct PersonalAccountView : View {
             } else {
                 ProgressView()
             }
-        }
+        }.onAppear {
+            self.loadAccountData()
+        }.alert(isPresented: $data.isEmpty, content: {
+            Alert(title: Text("There are no flights"), message: Text("There are no flights on this date"), dismissButton: .default(Text("Ok")))
+        })
         
     }
     
     func loadAccountData() {
         
-        let ref = Firebase.Database.database().reference()
+        let ref = FirebaseDatabase.Database.database().reference()
         let userID : String = (FirebaseAuth.Auth.auth().currentUser?.uid)!
         
-        ref.child("reservation").child(userID).observe(.value) { (snapshot) in
+        ref.child(userID).child("reservation").observe(.value) { (snapshot) in
             if let dictionary = snapshot.value as? [String:Any] {
                 let hotelName = dictionary["hotelName"] as? String
                 

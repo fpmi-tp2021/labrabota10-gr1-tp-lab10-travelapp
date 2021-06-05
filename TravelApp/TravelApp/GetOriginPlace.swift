@@ -15,10 +15,10 @@ class AirwaysRequestSettings : ObservableObject {
 
 struct GetOriginPlace: View {
     @StateObject var airwaysRequest = AirwaysRequestSettings()
-    var cityTo = ""
-    var name = ""
-    var price = ""
-    var date = ""
+    @State var cityTo = ""
+    @State var name = ""
+    @State var price = ""
+    @State var date = ""
     
     var body: some View {
         VStack {
@@ -55,7 +55,7 @@ struct GetOriginPlace: View {
                         .padding(.trailing)
                         .offset(x: -5)
                 }.fullScreenCover(isPresented: $airwaysRequest.isPresented, content: {
-                    AirwaysLoadView(airways: AirwaysRequest(cityFrom: airwaysRequest.cityFrom, cityTo: cityTo, date: date))
+                    AirwaysLoadView(airways: AirwaysRequest(cityFrom: self.airwaysRequest.cityFrom, cityTo: self.cityTo, date: self.date), name: self.name, price: self.price )
                 })
             }
         }

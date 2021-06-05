@@ -13,14 +13,14 @@ struct AirwaysLoadView : View {
     @State var carriers : [APICarriers]?
     @State var quotes : [APIQuotes]?
     
-    var name = ""
-    var price = ""
+    @State var name = ""
+    @State var price = ""
     
     var body: some View {
         
         Group {
             if airways.isLoaded {
-                AirwaysTableView(carriers: airways.carriers, quotes: airways.quotes, from: airways.cityFrom, to: airways.cityTo, name: name, price: price)
+                AirwaysTableView(carriers: airways.carriers, quotes: airways.quotes, from: airways.cityFrom, to: airways.cityTo, name: self.name, price: self.price)
             } else {
                 ProgressView()
             }
@@ -42,8 +42,8 @@ struct AirwaysTableView: View {
     var from : String
     var to : String
     
-    var name = ""
-    var price = ""
+    @State var name = ""
+    @State var price = ""
     
     var body: some View {
         VStack {
