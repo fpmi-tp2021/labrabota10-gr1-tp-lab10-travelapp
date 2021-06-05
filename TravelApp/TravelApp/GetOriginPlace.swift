@@ -24,17 +24,17 @@ struct GetOriginPlace: View {
             Spacer()
             
             
-            Text("Hello").font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(Color("customBlack"))
-                .padding(.top, 50)
-            
-            Spacer()
+//            Text("Hello").font(.title)
+//                .fontWeight(.bold)
+//                .foregroundColor(Color("customBlack"))
+//                .padding(.top, 50)
+//
+//            Spacer()
             
       
             Image("page2").resizable().aspectRatio(contentMode: .fit).scaledToFit()
             
-            Text("Let's find the best prices for plane").fontWeight(.semibold)
+            Text("Let's find the best prices for plane!").fontWeight(.semibold)
                 .kerning(1.3)
                 .multilineTextAlignment(.center).padding()
 

@@ -33,6 +33,7 @@ struct AirwaysLoadView : View {
 
 struct AirwaysTableView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @State var isPresented = false
     
     var carriers : [APICarriers]
     var quotes : [APIQuotes]
@@ -45,8 +46,10 @@ struct AirwaysTableView: View {
                 Button(action: {self.presentationMode.wrappedValue.dismiss()}, label: {
                     Image(systemName: "chevron.backward")
                 }).frame(width: UIScreen.main.bounds.width / 2 - 30, height: 20, alignment: .leading)
-                Button(action: {}, label: {
+                Button(action: {self.isPresented.toggle()}, label: {
                     Image(systemName: "gear")
+                }).fullScreenCover(isPresented: $isPresented, content: {
+                    SettingView()
                 }).frame(width: UIScreen.main.bounds.width / 2 - 30, height: 20, alignment: .trailing)
             }
             

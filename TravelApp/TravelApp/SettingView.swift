@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingView: View {
     
-    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var isPresented1 = false
     @State var isPresented2 = false
     @State var isPresented3 = false
@@ -74,15 +74,12 @@ struct SettingView: View {
             .overlay(
                 
                 Button(action: {
-                    self.isPresented1.toggle()
+                    self.presentationMode.wrappedValue.dismiss()
                     
                 }) {
                     Text("Back")
                         .foregroundColor(Color("customBlack"))
-                }.fullScreenCover(isPresented: $isPresented1, content: {
-                    HomeView()
-                })
-                .padding(.bottom,80)
+                }.padding(.bottom,80)
                 
                 ,alignment: .bottom
             )

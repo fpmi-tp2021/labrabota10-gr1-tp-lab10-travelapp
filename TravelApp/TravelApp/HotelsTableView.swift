@@ -30,6 +30,7 @@ struct LoadView: View {
 
 struct HotelsTableView: View {
     
+    @State var isPresented = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var hotels : [APIHotel]
@@ -42,9 +43,11 @@ struct HotelsTableView: View {
                 Button(action: {self.presentationMode.wrappedValue.dismiss()}, label: {
                     Text("Cancel")
                 }).padding(.trailing)
-             /*   Button(action: {}, label: {
+                Button(action: {self.isPresented.toggle()}, label: {
                     Image(systemName: "gear")
-                }).padding(.trailing)*/
+                }).fullScreenCover(isPresented: $isPresented, content: {
+                    SettingView()
+                }).padding(.trailing)
             }.frame(width: UIScreen.main.bounds.width - 30, height: 20, alignment: .trailing)
             
             NavigationView {
