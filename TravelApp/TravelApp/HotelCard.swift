@@ -15,30 +15,31 @@ struct HotelCard: View {
     @State var price : String
     
     var body: some View {
+       
         HStack{
-            
 
             VStack(alignment: .leading) {
                
                 Text("\(name)").font(.title2).fontWeight(.regular).lineLimit(1).frame(maxWidth: .infinity, alignment: .leading).padding(.bottom, 1)
                 
                 HStack {
+                    
                     ForEach(0..<stars, id: \.self) { item in
+                        
                         Image(systemName: "star.fill").font(.body).foregroundColor(.yellow)
                     }
                 }.padding(.bottom)
                 
-                
                 Text("From city center \(distance)").font(.body).fontWeight(.light)
+                
                 Text("Price \(price)").font(.body).fontWeight(.light)
-
 
             }
             
             
             Image(systemName: "house.fill").font(.title).foregroundColor(Color.blue).imageScale(.large).frame(width: 70, height: 70,alignment: .leading)
             
-        }.padding(.bottom, 5)
+        }.padding(10)
         
     }
 }

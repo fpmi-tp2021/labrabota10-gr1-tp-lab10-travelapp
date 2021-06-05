@@ -131,7 +131,7 @@ struct APIResult : Decodable
     let results : [APIHotel]
 }
 
-struct APIHotel : Decodable
+struct APIHotel : Decodable, Identifiable
 {
     let id : Int
     let name : String

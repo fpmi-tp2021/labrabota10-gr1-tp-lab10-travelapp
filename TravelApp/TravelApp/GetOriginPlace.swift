@@ -16,6 +16,8 @@ class AirwaysRequestSettings : ObservableObject {
 struct GetOriginPlace: View {
     @StateObject var airwaysRequest = AirwaysRequestSettings()
     var cityTo = ""
+    var name = ""
+    var price = ""
     var date = ""
     
     var body: some View {
@@ -23,15 +25,6 @@ struct GetOriginPlace: View {
             
             Spacer()
             
-            
-//            Text("Hello").font(.title)
-//                .fontWeight(.bold)
-//                .foregroundColor(Color("customBlack"))
-//                .padding(.top, 50)
-//
-//            Spacer()
-            
-      
             Image("page2").resizable().aspectRatio(contentMode: .fit).scaledToFit()
             
             Text("Let's find the best prices for plane!").fontWeight(.semibold)
