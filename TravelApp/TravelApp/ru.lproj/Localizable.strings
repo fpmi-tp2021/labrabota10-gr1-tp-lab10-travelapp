@@ -6,5 +6,55 @@
   
 */
 "Reporting a bug" = "Сообщение об ошибке";
+"First, thank you for reporting bugs! Identifying, reproducing, and documenting bugs is not always fun or easy, but it’s an important part of making excellent software. It can also be rewarding, as you’ll have a direct influence on the applications. We really, honestly appreciate your help. Please describe a bug as detailed as possible in the textfield below and we will fix it.\n" = "Спасибо за ваше сообщение об ошибке! Выявление и документирование ошибок - не всегда весело или легко, но это важная часть создания качественного программного обеспечения. Это важно для нас, так как вы имеете прямое влияние на наше приложение. Мы искренне ценим вашу помощь. Пожалуйста, опишите ошибку как можно подробнее в текстовом поле ниже, и мы исправим ее.\n";
+"Write here..." = "Пишите здесь...";
+"   Report   " = "   Сообщить   ";
+"Thank you for your attention!\n" = "Спасибо за ваше внимание!\n";
+"We will try to solve your problem as quickly as possible." = "Мы постараемся решить вашк проблему как можно скорее.";
+"   Go home   " = "   Домой   ";
 
-"First, thank you for reporting bugs! Identifying, reproducing, and documenting bugs is not always fun or easy, but it’s an important part of making excellent software. It can also be rewarding, as you’ll have a direct influence on the applications. We really, honestly appreciate your help. Please describe a bug as detailed as possible in the textfield below and we will fix it.\n" = "\n";
+"Sign In" = "Войти";
+"Username" = "Имя пользователя";
+"Enter Your Username" = "Введите имя пользователя";
+"Password" = "Пароль";
+"Enter Your Password" = "Введите пароль";
+"Sign Up" = "Зарегистрироваться";
+"Error" = "Ошибка";
+"Don't Have An Account ?" = "Еще не с нами ?";
+
+"Find your travel direction" = "Поиск по вашему направлению";
+"Failed" = "Ошибка";
+"Input data is incorrect" = "Входные данные некорректны";
+"Date" = "Дата";
+"Check in date" = "Дата отправления";
+"Check out date" = "Дата приезда";
+"People" = "Люди";
+"Amount of adults" = "Количество взрослых";
+"Price" = "Цена";
+"Maximum price" = "Максимальная цена";
+"Minimum price" = "Минимальная цена";
+"Home" = "Домой";
+"From city center" = "До центра";
+
+"Log Out" = "Выйти";
+"Back" = "Назад";
+"Settings" = "Настройки";
+"Report a bug" = "Сообщить об ошибке";
+"About us" = "О нас";
+"Navigation" = "Навигация";
+"Language" = "Язык";
+"Contact us" = "Свяжитесь с нами";
+
+"Russian" = "Русский";
+"Belarusian" = "Белорусский";
+"English" = "Английский";
+
+"Skip" = "Пропустить";
+"Hello!" = "Привет!";
+"   Next   " = "   Далее   ";
+"Find best hotel" = "Найди лучший отель";
+"We can help you to find best lodging place from budget hostels to luxury suites" = "Мы поможем тебе найти лучшее место: от бюджетных хостелов до роскошных отелей";
+"Book your ticket" = "Забронируйте билет";
+"Find the best prices for plane, bus or train tickets and book them" = "Найдите лучшие цены на самолеты, автобусы и поезда";
+"Enjoy your travel!" = "Наслаждайтесь вашим путешествием!";
+"Enjoy every minute of your journey with TravelApp" = "Наслаждайтесь каждой минутой вместе с TravelApp!";

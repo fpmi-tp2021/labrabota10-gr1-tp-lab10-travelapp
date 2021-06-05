@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContactView: View {
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var usersReport: String = ""
     @State var show = false
@@ -22,7 +24,7 @@ struct ContactView: View {
             }
             
             HStack{
-            Text("Contact us").font(.title).fontWeight(.semibold).kerning(1.2)
+            Text("Contact us".localized(language)).font(.title).fontWeight(.semibold).kerning(1.2)
             }.frame(width: UIScreen.main.bounds.width - 50, height: 100, alignment: .center)
             
             

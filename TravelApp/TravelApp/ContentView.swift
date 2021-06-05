@@ -12,6 +12,8 @@ import FirebaseAuth
 
 struct ContentView: View {
 
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
     
     var body: some View {
@@ -39,6 +41,9 @@ struct ContentView: View {
 }
 
 struct SignIn : View {
+    
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @State var user = ""
     @State var pass = ""
     @State var message = ""
@@ -48,17 +53,17 @@ struct SignIn : View {
     var body : some View{
         VStack {
             VStack{
-                Text("Sign In").fontWeight(.heavy).font(.largeTitle).padding([.top,.bottom], 20)
+                Text("Sign In".localized(language)).fontWeight(.heavy).font(.largeTitle).padding([.top,.bottom], 20)
                 
                 VStack(alignment: .leading){
                     
                     VStack(alignment: .leading){
                         
-                        Text("Username").font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
+                        Text("Username".localized(language)).font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
                         
                         HStack{
                             
-                            TextField("Enter Your Username", text: $user).autocapitalization(.none)
+                            TextField("Enter Your Username".localized(language), text: $user).autocapitalization(.none)
                             
                             if user != ""{
                                 
@@ -73,9 +78,9 @@ struct SignIn : View {
                     
                     VStack(alignment: .leading){
                         
-                        Text("Password").font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
+                        Text("Password".localized(language)).font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
                         
-                        SecureField("Enter Your Password", text: $pass)
+                        SecureField("Enter Your Password".localized(language), text: $pass)
                         
                         Divider()
                     }
@@ -100,7 +105,7 @@ struct SignIn : View {
                     
                 }) {
                     
-                    Text("Sign In").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
+                    Text("Sign In".localized(language)).foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
                     
                     
                 }.background(Color("mainColor"))
@@ -110,14 +115,14 @@ struct SignIn : View {
             }.padding()
             .alert(isPresented: $alert) {
                 
-                Alert(title: Text("Error"), message: Text(self.message), dismissButton: .default(Text("Ok")))
+                Alert(title: Text("Error".localized(language)), message: Text(self.message), dismissButton: .default(Text("Ok")))
             }
             VStack{
 
                 
                 HStack(spacing: 8){
                     
-                    Text("Don't Have An Account ?").foregroundColor(Color.gray.opacity(0.5))
+                    Text("Don't Have An Account ?".localized(language)).foregroundColor(Color.gray.opacity(0.5))
                     
                     Button(action: {
                         
@@ -125,7 +130,7 @@ struct SignIn : View {
                         
                     }) {
                         
-                        Text("Sign Up")
+                        Text("Sign Up".localized(language))
                         
                     }.foregroundColor(.blue)
                     
@@ -142,6 +147,8 @@ struct SignIn : View {
 
 
 struct SignUp : View {
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @State var user = ""
     @State var pass = ""
     @State var message = ""
@@ -151,17 +158,17 @@ struct SignUp : View {
     var body : some View{
         
         VStack{
-            Text("Sign Up").fontWeight(.heavy).font(.largeTitle).padding([.top,.bottom], 20)
+            Text("Sign Up".localized(language)).fontWeight(.heavy).font(.largeTitle).padding([.top,.bottom], 20)
             
             VStack(alignment: .leading){
                 
                 VStack(alignment: .leading){
                     
-                    Text("Username").font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
+                    Text("Username".localized(language)).font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
                     
                     HStack{
                         
-                        TextField("Enter Your Username", text: $user).autocapitalization(.none)
+                        TextField("Enter Your Username".localized(language), text: $user).autocapitalization(.none)
                         
                         if user != ""{
                             
@@ -176,9 +183,9 @@ struct SignUp : View {
                 
                 VStack(alignment: .leading){
                     
-                    Text("Password").font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
+                    Text("Password".localized(language)).font(.headline).fontWeight(.light).foregroundColor(Color.init(.label).opacity(0.75))
                     
-                    SecureField("Enter Your Password", text: $pass)
+                    SecureField("Enter Your Password".localized(language), text: $pass)
                     
                     Divider()
                 }
@@ -207,7 +214,7 @@ struct SignUp : View {
                 
             }) {
                 
-                Text("Sign Up").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
+                Text("Sign Up".localized(language)).foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
                 
                 
             }.background(Color(.blue))
@@ -217,7 +224,7 @@ struct SignUp : View {
         }.padding()
         .alert(isPresented: $alert) {
             
-            Alert(title: Text("Error"), message: Text(self.message), dismissButton: .default(Text("Ok")))
+            Alert(title: Text("Error".localized(language)), message: Text(self.message), dismissButton: .default(Text("Ok")))
         }
     }
 }

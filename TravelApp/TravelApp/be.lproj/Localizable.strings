@@ -6,3 +6,55 @@
   
 */
 "Reporting a bug" = "Паведамленне аб памылцы";
+"First, thank you for reporting bugs! Identifying, reproducing, and documenting bugs is not always fun or easy, but it’s an important part of making excellent software. It can also be rewarding, as you’ll have a direct influence on the applications. We really, honestly appreciate your help. Please describe a bug as detailed as possible in the textfield below and we will fix it.\n" = "Дзякуй за вашае паведамленне пра памылку! Выяўленне і дакументаванне памылак - не заўсёды весела або лёгка, але гэта важная частка стварэння якаснага праграмнага забеспячэння. Гэта важна для нас, бо вы маеце прамое дачыненне на нашага дадатаку. Мы шчыра цэнім вашу дапамогу. Калі ласка, апішыце памылку як мага падрабязней у тэкставым полі ніжэй, і мы выправім яе.\n";
+"Write here..." = "Пішыце тут...";
+"   Report   " = "   Паведаміць   ";
+"Thank you for your attention!\n" = "Дзякуй за вашу дапамогу!\n";
+"We will try to solve your problem as quickly as possible." = "Мы пастараемся вырашыць вашую праблему як мага хутчэй.";
+"   Go home   " = "   У пачатак   ";
+
+"Sign In" = "Увайсці";
+"Username" = "Імя карыстальніка";
+"Enter Your Username" = "Увядзіце мя карыстальніка";
+"Password" = "Пароль";
+"Enter Your Password" = "Увядзіце пароль";
+"Sign Up" = "Зарэгістравацца";
+"Error" = "Памылка";
+"Don't Have An Account ?" = "Яшчэ не з намі ?";
+
+"Find your travel direction" = "Пошук па вашаму накірунку";
+"Failed" = "Памылка";
+"Input data is incorrect" = "Уваходныя дадзеныя некарэктныя";
+"Date" = "Дата";
+"Check in date" = "Дата адпраўлення";
+"Check out date" = "Дата прыезда";
+"People" = "Людзі";
+"Amount of adults" = "Колькасць дарослых";
+"Price" = "Цана";
+"Maximum price" = "Максімальная цана";
+"Minimum price" = "Мінімальная цана";
+"Home" = "У пачатак";
+"From city center" = "Да цэнтру";
+
+"Log Out" = "Выйсці";
+"Back" = "Назад";
+"Settings" = "Налады";
+"Report a bug" = "Паведаміць аб памылцы";
+"About us" = "Пра нас";
+"Navigation" = "Навігацыя";
+"Language" = "Мова";
+"Contact us" = "Сувязь з намі";
+
+"Russian" = "Рускі";
+"Belarusian" = "Беларускі";
+"English" = "Англійскі";
+
+"Skip" = "Прапусціць";
+"Hello!" = "Вітаем!";
+"   Next   " = "   Далей   ";
+"Find best hotel" = "Знайдзі лепшы гатэль";
+"We can help you to find best lodging place from budget hostels to luxury suites" = "Мы дапаможам табе знайсці лепшае месца: от бюджэтных хостелаў да раскошных гатэляў";
+"Book your ticket" = "Забраніруйце квіток";
+"Find the best prices for plane, bus or train tickets and book them" = "Знайдзіце лепшыя кошты на самолёты, аўтобусы і цяшнікі";
+"Enjoy your travel!" = "Атрымоўвайце асалоду ад вашага падарожжа!";
+"Enjoy every minute of your journey with TravelApp" = "Атрымоўвайце асалоду ад кожнай хвіліны разам з TravelApp!";

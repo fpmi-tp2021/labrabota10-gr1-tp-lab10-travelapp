@@ -15,6 +15,8 @@ struct SettingView: View {
     @State var isPresented3 = false
     @State var isPresented4 = false
     @State var isPresented5 = false
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
 
     
     var body: some View {
@@ -26,7 +28,7 @@ struct SettingView: View {
                         self.isPresented5.toggle()
                         
                     }) {
-                        SettingsCell(title: "Language", imgName: "globe", clr: Color("customBlack"))
+                        SettingsCell(title: "Language".localized(language), imgName: "globe", clr: Color("customBlack"))
                             .foregroundColor(Color("customBlack"))
                     }.fullScreenCover(isPresented: $isPresented5, content: {
                         LanguageView()
@@ -38,7 +40,7 @@ struct SettingView: View {
                         self.isPresented4.toggle()
                         
                     }) {
-                        SettingsCell(title: "Navigation", imgName: "shuffle", clr: Color("customBlack"))
+                        SettingsCell(title: "Navigation".localized(language), imgName: "shuffle", clr: Color("customBlack"))
                             .foregroundColor(Color("customBlack"))
                     }.fullScreenCover(isPresented: $isPresented4, content: {
                         WalkthroughView2()
@@ -47,7 +49,7 @@ struct SettingView: View {
                         self.isPresented3.toggle()
                         
                     }) {
-                        SettingsCell(title: "About us", imgName: "info.circle", clr: Color("customBlack"))
+                        SettingsCell(title: "About us".localized(language), imgName: "info.circle", clr: Color("customBlack"))
                             .foregroundColor(Color("customBlack"))
                     }.fullScreenCover(isPresented: $isPresented3, content: {
                         ContactView()
@@ -58,7 +60,7 @@ struct SettingView: View {
                         self.isPresented2.toggle()
                         
                     }) {
-                        SettingsCell(title: "Report a bug", imgName: "ladybug.fill", clr: Color("customBlack"))
+                        SettingsCell(title: "Report a bug".localized(language), imgName: "ladybug.fill", clr: Color("customBlack"))
                             .foregroundColor(Color("customBlack"))
                     }.fullScreenCover(isPresented: $isPresented2, content: {
                         ReportView()
@@ -70,14 +72,14 @@ struct SettingView: View {
                 
             }.listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-            .navigationBarTitle("Settings")
+            .navigationBarTitle("Settings".localized(language))
             .overlay(
                 
                 Button(action: {
                     self.presentationMode.wrappedValue.dismiss()
                     
                 }) {
-                    Text("Back")
+                    Text("Back".localized(language))
                         .foregroundColor(Color("customBlack"))
                 }.padding(.bottom,80)
                 
@@ -89,7 +91,7 @@ struct SettingView: View {
                     UserDefaults.standard.set(false, forKey: "status")
                     NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
                 }) {
-                    Text("Log Out").font(.headline)
+                    Text("Log Out".localized(language)).font(.headline)
                         .fontWeight(.regular).kerning(1.0)
                         .foregroundColor(Color.red).foregroundColor(Color("customBlack"))
                 }

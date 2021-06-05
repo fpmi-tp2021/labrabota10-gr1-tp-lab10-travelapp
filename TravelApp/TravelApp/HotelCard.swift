@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HotelCard: View {
     
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @State var stars : Int
     @State var name : String
     @State var distance : String
@@ -30,9 +32,9 @@ struct HotelCard: View {
                     }
                 }.padding(.bottom)
                 
-                Text("From city center \(distance)").font(.body).fontWeight(.light)
+                Text("From city center \(distance)".localized(language)).font(.body).fontWeight(.light)
                 
-                Text("Price \(price)").font(.body).fontWeight(.light)
+                Text("Price \(price)".localized(language)).font(.body).fontWeight(.light)
 
             }
             

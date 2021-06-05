@@ -19,6 +19,8 @@ class RequestSettings: ObservableObject {
 
 struct HomeView: View {
     
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @StateObject var settings = RequestSettings()
     @State private var showingSheet = false
     @State private var isPresented = false
@@ -33,7 +35,7 @@ struct HomeView: View {
                         .foregroundColor(Color(.secondarySystemBackground))
                         .padding()
                     
-                    TextField("Find your travel direction", text: $settings.city)
+                    TextField("Find your travel direction".localized(language), text: $settings.city)
                         .padding(.leading)
                         .offset(x: 12)
                     
@@ -54,7 +56,7 @@ struct HomeView: View {
                             .padding(.trailing)
                             .offset(x: -5)
                     }.alert(isPresented: $settings.isEmpty, content: {
-                        Alert(title: Text("Failed"), message: Text("Input data is incorrect"), dismissButton: .default(Text("Ok")))
+                        Alert(title: Text("Failed".localized(language)), message: Text("Input data is incorrect".localized(language)), dismissButton: .default(Text("Ok")))
                     }).fullScreenCover(isPresented: $showingSheet, content: {
                        LoadView(hotels: HotelRequest(city: settings.city, checkIn: settings.checkIn, checkOut: settings.checkOut, adults: settings.adults, maxPrice: settings.maxPrice, minPrice: settings.minPrice))
                     })
@@ -63,30 +65,30 @@ struct HomeView: View {
             
             Form{
                 
-                Section(header: Text("Date").fontWeight(.heavy).font(.title3)){
+                Section(header: Text("Date".localized(language)).fontWeight(.heavy).font(.title3)){
                     
                     VStack{
                         
-                        DatePicker("Check in date", selection: $settings.checkIn, displayedComponents: [.date])
+                        DatePicker("Check in date".localized(language), selection: $settings.checkIn, displayedComponents: [.date])
                     }
                     VStack{
                         
-                        DatePicker("Check out date", selection: $settings.checkOut, displayedComponents: [.date])
+                        DatePicker("Check out date".localized(language), selection: $settings.checkOut, displayedComponents: [.date])
                     }
                     
                 }
-                Section(header: Text("People").fontWeight(.heavy).font(.title3)) {
+                Section(header: Text("People".localized(language)).fontWeight(.heavy).font(.title3)) {
                     
                     
-                    Stepper("Amount of adults  \(settings.adults)", value: $settings.adults, in: 1...6)
+                    Stepper("Amount of adults  \(settings.adults)".localized(language), value: $settings.adults, in: 1...6)
                     
                 }
                 
-                Section(header: Text("Price").fontWeight(.heavy).font(.title3)) {
+                Section(header: Text("Price".localized(language)).fontWeight(.heavy).font(.title3)) {
                     
-                    Stepper("Maximum price  \(settings.maxPrice)", value: $settings.maxPrice, in: 300...1000, step: 20)
+                    Stepper("Maximum price  \(settings.maxPrice)".localized(language), value: $settings.maxPrice, in: 300...1000, step: 20)
                     
-                    Stepper("Minimum price  \(settings.minPrice)", value: $settings.minPrice, in: 50...700, step: 20)
+                    Stepper("Minimum price  \(settings.minPrice)".localized(language), value: $settings.minPrice, in: 50...700, step: 20)
 
                 }
             }
@@ -96,7 +98,7 @@ struct HomeView: View {
             }) {
                 
                     
-                    Text("Home").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
+                    Text("Home".localized(language)).foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
                     
                     
             }.fullScreenCover(isPresented: $isPresented, content: {

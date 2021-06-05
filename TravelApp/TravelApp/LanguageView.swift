@@ -22,7 +22,7 @@ struct LanguageView: View {
                         self.isPresented6.toggle()
                         
                     }) {
-                        SettingsCell(title: "English", imgName: "", clr: Color("customBlack"))
+                        SettingsCell(title: "English".localized(language), imgName: "", clr: Color("customBlack"))
                             .foregroundColor(Color("customBlack"))
                     }.fullScreenCover(isPresented: $isPresented6, content: {
                         SettingView()
@@ -33,7 +33,7 @@ struct LanguageView: View {
                         self.isPresented6.toggle()
                         
                     }) {
-                        SettingsCell(title: "Belarusian", imgName: "", clr: Color("customBlack"))
+                        SettingsCell(title: "Belarusian".localized(language), imgName: "", clr: Color("customBlack"))
                             .foregroundColor(Color("customBlack"))
                     }.fullScreenCover(isPresented: $isPresented6, content: {
                         SettingView()
@@ -46,7 +46,7 @@ struct LanguageView: View {
                         self.isPresented6.toggle()
                         
                     }) {
-                        SettingsCell(title: "Russian", imgName: "", clr: Color("customBlack"))
+                        SettingsCell(title: "Russian".localized(language), imgName: "", clr: Color("customBlack"))
                             .foregroundColor(Color("customBlack"))
                     }.fullScreenCover(isPresented: $isPresented6, content: {
                         SettingView()
@@ -56,7 +56,7 @@ struct LanguageView: View {
                 
             }.listStyle(GroupedListStyle())
             .environment(\.horizontalSizeClass, .regular)
-            .navigationBarTitle("Language")
+            .navigationBarTitle("Language".localized(language))
             .overlay(
                 
                 Button(action: {

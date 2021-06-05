@@ -27,6 +27,8 @@ struct WalkthroughView2_Previews: PreviewProvider {
 }
 
 struct WalkthrougScreen2: View {
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @State var currrentPage = 1
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
@@ -35,20 +37,20 @@ struct WalkthrougScreen2: View {
         ZStack {
             
             if currrentPage == 1 {
-                WalkthroughContentView2 (image: "page1", title: "Find best hotel", detail: "We can help you to find best lodging place from budget hostels to luxury suites").transition(.scale)
+                WalkthroughContentView2 (image: "page1", title: "Find best hotel".localized(language), detail: "We can help you to find best lodging place from budget hostels to luxury suites".localized(language)).transition(.scale)
             }
             if currrentPage == 2 {
-                WalkthroughContentView2 (image: "page2", title: "Book your ticket", detail: "Find the best prices for plane, bus or train tickets and book them").transition(.scale)
+                WalkthroughContentView2 (image: "page2", title: "Book your ticket".localized(language), detail: "Find the best prices for plane, bus or train tickets and book them".localized(language)).transition(.scale)
             }
             if currrentPage == 3 {
-                WalkthroughContentView2 (image: "page3", title: "Enjoy your travel!", detail: "Enjoy every minute of your journey with TravelApp").transition(.scale)
+                WalkthroughContentView2 (image: "page3", title: "Enjoy your travel!".localized(language), detail: "Enjoy every minute of your journey with TravelApp".localized(language)).transition(.scale)
             }
             
         }
         .overlay(
 
             Button(action: {withAnimation(.easeInOut){ currrentPage += 1 }}, label: {
-                Text("   Next   ").font(.title2)
+                Text("   Next   ".localized(language)).font(.title2)
                     .fontWeight(.bold).kerning(1.4)
                     .padding()
                     .foregroundColor(Color.white)
@@ -74,6 +76,8 @@ struct WalkthroughContentView2: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var currrentPage = 1
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     
     var body: some View {
         
@@ -85,13 +89,13 @@ struct WalkthroughContentView2: View {
 
                     if currrentPage == 1{
 
-                        Text("Hello!").font(.title).fontWeight(.semibold).kerning(1.4)
+                        Text("Hello!".localized(language)).font(.title).fontWeight(.semibold).kerning(1.4)
                     }
                     
                     else {
                         Button(action: {
                                 withAnimation(.easeInOut){ currrentPage -= 1 }}, label: {
-                            Text("Back").fontWeight(.semibold).kerning(1.2).padding(.vertical, 10)
+                            Text("Back".localized(language)).fontWeight(.semibold).kerning(1.2).padding(.vertical, 10)
                         })
                     }
 
@@ -99,7 +103,7 @@ struct WalkthroughContentView2: View {
 
                     Button(action: {
                             withAnimation(.easeInOut){self.presentationMode.wrappedValue.dismiss()}}, label: {
-                                Text("Skip").fontWeight(.semibold).kerning(1.2)
+                                Text("Skip".localized(language)).fontWeight(.semibold).kerning(1.2)
                     })
                     
                 }
