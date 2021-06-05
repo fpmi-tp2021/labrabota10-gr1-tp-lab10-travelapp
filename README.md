@@ -5,14 +5,23 @@ Description
 
 Instalation
 ---------------
+First, clone the repository to your computer and then open the program using Xcode.
 
 Usage
 ------------------
+💻 Using our application, you are provided with the following functionality:
+----------------------------------------------------------------------------------------------------------- 
+1. 📝 Register
+2. 🔓 Log in to the app with your username and password
+3. 🏨 Choose and book a hotel
+4. ✈ Select and book means of transport
+5. 🧭 Choose a route
+6. ❤ Add hotels to the "Favorites" section
 
 ### Contributing:
 Name | Responsibilites
 ------------|-------------
    D.Semenovich | Application, Unit/UI-tests
    A.Bokun | Application, Unit/UI-tests
-   N.Korosteleva | Documentation
+   N.Korosteleva | Documentation, Report
    
