@@ -16,8 +16,11 @@ struct HotelCard: View {
     
     var body: some View {
         HStack{
-            
 
+           // Image("logo").resizable().frame( width: 150, height: 150, alignment: .center).scaledToFit()
+              //  .imageScale(.small).background(Color.white).cornerRadius(15)
+            
+            VStack{
             VStack(alignment: .leading) {
                
                 Text("\(name)").font(.title2).fontWeight(.regular).lineLimit(1).frame(maxWidth: .infinity, alignment: .leading).padding(.bottom, 1)
@@ -34,10 +37,7 @@ struct HotelCard: View {
 
 
             }
-            
-            
-            Image(systemName: "house.fill").font(.title).foregroundColor(Color.blue).imageScale(.large).frame(width: 70, height: 70,alignment: .leading)
-            
+            }
         }.padding(.bottom, 5)
         
     }
