@@ -10,7 +10,8 @@ import Foundation
 
 enum Language: String {
     case russian = "ru"
-    case english_us = "en"
+    case english = "en"
+    case belarusian = "be"
 }
 
 class LocalizationService {
@@ -23,9 +24,9 @@ class LocalizationService {
     var language: Language {
         get {
             guard let languageString = UserDefaults.standard.string(forKey: "language") else {
-                return .english_us
+                return .english
             }
-            return Language(rawValue: languageString) ?? .english_us
+            return Language(rawValue: languageString) ?? .english
         } set {
             if newValue != language {
                 UserDefaults.standard.setValue(newValue.rawValue, forKey: "language")

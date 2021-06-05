@@ -32,10 +32,10 @@ struct ReportView: View {
             }
             
             VStack(alignment: .leading) {
-                Text("First, thank you for reporting bugs! Identifying, reproducing, and documenting bugs is not always fun or easy, but it’s an important part of making excellent software. It can also be rewarding, as you’ll have a direct influence on the applications. We really, honestly appreciate your help. Please describe a bug as detailed as possible in the textfield below and we will fix it.\n")
+                Text("First, thank you for reporting bugs! Identifying, reproducing, and documenting bugs is not always fun or easy, but it’s an important part of making excellent software. It can also be rewarding, as you’ll have a direct influence on the applications. We really, honestly appreciate your help. Please describe a bug as detailed as possible in the textfield below and we will fix it.\n".localized(language))
                     .font(.callout).foregroundColor(Color("customBlack"))
     
-                TextField("Write here...", text: $usersReport)
+                TextField("Write here...".localized(language), text: $usersReport)
                     .multilineTextAlignment(.leading)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }.padding()
@@ -49,7 +49,7 @@ struct ReportView: View {
                 
             }) {
                 
-                Text("   Report   ").font(.title2)
+                Text("   Report   ".localized(language)).font(.title2)
                     .fontWeight(.bold).kerning(1.4)
                     .padding()
                     .foregroundColor(Color.white)
@@ -72,6 +72,8 @@ struct ReportView_Previews: PreviewProvider {
 }
 
 struct Report : View {
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @Binding var show : Bool
     @State var isPresented1 = false
     
@@ -79,10 +81,10 @@ struct Report : View {
         
         VStack{
             HStack{
-            Text("Thank you for your attention!\n").font(.title2).fontWeight(.semibold).kerning(1.2)
+            Text("Thank you for your attention!\n".localized(language)).font(.title2).fontWeight(.semibold).kerning(1.2)
             }
             HStack{
-                Text("We will try to solve your problem as quickly as possible.").font(.title3).fontWeight(.semibold).kerning(1.2).multilineTextAlignment(.center)
+                Text("We will try to solve your problem as quickly as possible.".localized(language)).font(.title3).fontWeight(.semibold).kerning(1.2).multilineTextAlignment(.center)
             }
             
             HStack(){
@@ -92,7 +94,7 @@ struct Report : View {
                     
                 }) {
                     
-                    Text("   Go home   ").font(.title2)
+                    Text("   Go home   ".localized(language)).font(.title2)
                         .fontWeight(.bold).kerning(1.4)
                         .padding()
                         .foregroundColor(Color.white)

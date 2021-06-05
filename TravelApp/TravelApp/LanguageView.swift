@@ -18,6 +18,7 @@ struct LanguageView: View {
             List {
                 Section {
                     Button(action: {
+                        LocalizationService.shared.language = .english
                         self.isPresented6.toggle()
                         
                     }) {
@@ -28,6 +29,7 @@ struct LanguageView: View {
                     })
                     
                     Button(action: {
+                        LocalizationService.shared.language = .belarusian
                         self.isPresented6.toggle()
                         
                     }) {
