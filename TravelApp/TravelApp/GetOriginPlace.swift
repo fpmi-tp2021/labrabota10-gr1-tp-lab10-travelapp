@@ -14,6 +14,8 @@ class AirwaysRequestSettings : ObservableObject {
 }
 
 struct GetOriginPlace: View {
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     @StateObject var airwaysRequest = AirwaysRequestSettings()
     @State var cityTo = ""
     @State var name = ""
@@ -27,7 +29,7 @@ struct GetOriginPlace: View {
             
             Image("page2").resizable().aspectRatio(contentMode: .fit).scaledToFit()
             
-            Text("Let's find the best prices for plane!").fontWeight(.semibold)
+            Text("Let's find the best prices for plane!".localized(language)).fontWeight(.semibold)
                 .kerning(1.3)
                 .multilineTextAlignment(.center).padding()
 
@@ -40,7 +42,7 @@ struct GetOriginPlace: View {
                     .foregroundColor(Color(.secondarySystemBackground))
                     .padding()
                 
-                TextField("Enter the origin place", text: $airwaysRequest.cityFrom)
+                TextField("Enter the origin place".localized(language), text: $airwaysRequest.cityFrom)
                     .padding(.leading)
                     .offset(x: 12)
                 

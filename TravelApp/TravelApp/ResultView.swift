@@ -11,6 +11,8 @@ import FirebaseAuth
 
 struct ResultView: View {
     
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
     var hotelName: String
     var hotelPrice: String
     
@@ -24,7 +26,7 @@ struct ResultView: View {
     var body: some View {
         VStack{
             
-            Text("Your choise").fontWeight(.heavy).font(.largeTitle).padding([.top,.bottom], 50)
+            Text("Your choise".localized(language)).fontWeight(.heavy).font(.largeTitle).padding([.top,.bottom], 50)
             
             Group {
            

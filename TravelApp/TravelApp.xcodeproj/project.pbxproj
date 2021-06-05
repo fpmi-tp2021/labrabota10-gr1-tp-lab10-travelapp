@@ -37,7 +37,6 @@
 		D47A22912667856D00D15E06 /* FindHotelsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47A22902667856D00D15E06 /* FindHotelsModel.swift */; };
 		D483B880266818B7000F9928 /* HotelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D483B87F266818B7000F9928 /* HotelCard.swift */; };
 		D4896710266B469300A723BC /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489670F266B469300A723BC /* ResultView.swift */; };
-		D4896748266B70D800A723BC /* PersonalAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4896747266B70D800A723BC /* PersonalAccountView.swift */; };
 		D4C09F4226689E9000F95267 /* HotelsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C09F4126689E9000F95267 /* HotelsTableView.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +100,6 @@
 		D47A22902667856D00D15E06 /* FindHotelsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindHotelsModel.swift; sourceTree = "<group>"; };
 		D483B87F266818B7000F9928 /* HotelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelCard.swift; sourceTree = "<group>"; };
 		D489670F266B469300A723BC /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
-		D4896747266B70D800A723BC /* PersonalAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalAccountView.swift; sourceTree = "<group>"; };
 		D4C09F4126689E9000F95267 /* HotelsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelsTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +191,6 @@
 				45F8D4F1266AD8C2008545EB /* LocalizationService.swift */,
 				45F8D546266ADB93008545EB /* String.swift */,
 				D489670F266B469300A723BC /* ResultView.swift */,
-				D4896747266B70D800A723BC /* PersonalAccountView.swift */,
 			);
 			path = TravelApp;
 			sourceTree = "<group>";
@@ -431,7 +428,6 @@
 				4520E4D8266B3A990012537F /* DatabaseModel.swift in Sources */,
 				4520E4C9266B3A820012537F /* GetOriginPlace.swift in Sources */,
 				D40322DC26662CF3002D604B /* SceneDelegate.swift in Sources */,
-				D4896748266B70D800A723BC /* PersonalAccountView.swift in Sources */,
 				D4770E18266642A70013B80F /* HomeView.swift in Sources */,
 				D40322DE26662CF3002D604B /* ContentView.swift in Sources */,
 				457FDA28266ABAD2007F0126 /* WalkthroughView2.swift in Sources */,

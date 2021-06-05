@@ -9,6 +9,9 @@ import SwiftUI
 
 struct AirwaysLoadView : View {
     
+    @AppStorage("language")
+    private var language = LocalizationService.shared.language
+    
     @ObservedObject var airways = AirwaysRequest()
     @State var carriers : [APICarriers]?
     @State var quotes : [APIQuotes]?
@@ -27,7 +30,7 @@ struct AirwaysLoadView : View {
         }.onAppear {
             self.airways.getAirways()
         }.alert(isPresented: $airways.isEmpty, content: {
-            Alert(title: Text("There are no flights"), message: Text("There are no flights on this date"), dismissButton: .default(Text("Ok")))
+            Alert(title: Text("There are no flights".localized(language)), message: Text("There are no flights on this date".localized(language)), dismissButton: .default(Text("Ok")))
         })
         
     }

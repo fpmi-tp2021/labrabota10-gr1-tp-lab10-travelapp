@@ -102,7 +102,7 @@ struct HomeView: View {
                     
                     
             }.fullScreenCover(isPresented: $isPresented, content: {
-                PersonalAccountView()
+//                PersonalAccountView()
             }).background(Color("mainColor"))
                 .clipShape(Capsule())
                 .padding(.top, 45)
