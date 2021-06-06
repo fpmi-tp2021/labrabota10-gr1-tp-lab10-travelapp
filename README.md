@@ -27,5 +27,7 @@ Name | Responsibilites
    
 ### Our app:
 
-https://user-images.githubusercontent.com/75484143/120923227-19052280-c6d6-11eb-9156-ee78cef359d9.mov
+
+https://user-images.githubusercontent.com/75484143/120926831-2080f780-c6e7-11eb-9ddc-5ed2f59ff6ea.mov
+
 
