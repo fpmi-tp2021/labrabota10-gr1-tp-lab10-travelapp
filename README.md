@@ -25,3 +25,7 @@ Name | Responsibilites
    A.Bokun | Application, Unit/UI-tests
    N.Korosteleva | Documentation, Report
    
+### Our app:
+
+https://user-images.githubusercontent.com/75484143/120923227-19052280-c6d6-11eb-9156-ee78cef359d9.mov
+
