@@ -87,9 +87,9 @@ extension HotelRequest
                     do {
                         
                         let jsonData = String(decoding: data!, as: UTF8.self)
-                        let response = try! JSONDecoder().decode(APIResponse.self, from: jsonData.data(using: .utf8)!)
+                        let response = try? JSONDecoder().decode(APIResponse.self, from: jsonData.data(using: .utf8)!)
                         
-                        guard (response.searchResults.results.count != 0) else {
+                        guard (response?.searchResults.results.count != 0) else {
                             
                             print("Failed")
                             return
@@ -98,11 +98,11 @@ extension HotelRequest
                         
                         DispatchQueue.main.async {
                             
-                            if response.searchResults.results.count == 0 {
+                            if response?.searchResults.results.count == 0 {
                                 self.isEmpty = true
                             }
                             
-                            self.searchData = response.searchResults.results
+                            self.searchData = response?.searchResults.results ?? []
                             self.dataHasLoaded = true
                             
                         }
