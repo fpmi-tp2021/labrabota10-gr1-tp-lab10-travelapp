@@ -27,25 +27,24 @@ struct ReportView: View {
             }
             
             HStack{
-            Text("Reporting a bug".localized(language)).font(.title).fontWeight(.semibold).kerning(1.2)
-           
+                Text("Reporting a bug".localized(language)).font(.title).fontWeight(.semibold).kerning(1.2)
+                
             }
             
             VStack(alignment: .leading) {
                 Text("First, thank you for reporting bugs! Identifying, reproducing, and documenting bugs is not always fun or easy, but it’s an important part of making excellent software. It can also be rewarding, as you’ll have a direct influence on the applications. We really, honestly appreciate your help. Please describe a bug as detailed as possible in the textfield below and we will fix it.\n".localized(language))
                     .font(.callout).foregroundColor(Color("customBlack"))
-    
+                
                 TextField("Write here...".localized(language), text: $usersReport)
                     .multilineTextAlignment(.leading)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }.padding()
             
-            Spacer(minLength: 100)
-        }.overlay(
+            Spacer()
             
             Button(action: {
-                    
-                    self.show.toggle()
+                
+                self.show.toggle()
                 
             }) {
                 
@@ -55,13 +54,16 @@ struct ReportView: View {
                     .foregroundColor(Color.white)
                     .background(Color("mainColor"))
                     .cornerRadius(20)
-            })
-        .padding(.bottom).sheet(isPresented: $show) {
-            
-            Report(show: self.$show)
+            }
+            .padding(.bottom).sheet(isPresented: $show) {
+                
+                Report(show: self.$show)
+            }
         }
+        
+        
     }
-    }
+}
 
 
 
@@ -81,7 +83,7 @@ struct Report : View {
         
         VStack{
             HStack{
-            Text("Thank you for your attention!\n".localized(language)).font(.title2).fontWeight(.semibold).kerning(1.2)
+                Text("Thank you for your attention!\n".localized(language)).font(.title2).fontWeight(.semibold).kerning(1.2)
             }
             HStack{
                 Text("We will try to solve your problem as quickly as possible.".localized(language)).font(.title3).fontWeight(.semibold).kerning(1.2).multilineTextAlignment(.center)
@@ -89,7 +91,7 @@ struct Report : View {
             
             HStack(){
                 Button(action: {
-                        
+                    
                     self.isPresented1.toggle()
                     
                 }) {

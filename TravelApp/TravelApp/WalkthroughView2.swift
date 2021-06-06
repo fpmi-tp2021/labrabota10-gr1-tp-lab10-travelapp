@@ -13,8 +13,8 @@ struct WalkthroughView2: View {
     
     
     var body: some View {
-       
-            WalkthrougScreen2()
+        
+        WalkthrougScreen2()
         
         
     }
@@ -48,7 +48,7 @@ struct WalkthrougScreen2: View {
             
         }
         .overlay(
-
+            
             Button(action: {withAnimation(.easeInOut){ currrentPage += 1 }}, label: {
                 Text("   Next   ".localized(language)).font(.title2)
                     .fontWeight(.bold).kerning(1.4)
@@ -58,11 +58,11 @@ struct WalkthrougScreen2: View {
                     .cornerRadius(20)
             })
             .padding(.bottom,40)
-
+            
             ,alignment: .bottom
         )
         if currrentPage == 4 {
-           SettingView()
+            SettingView()
         }
     }
 }
@@ -86,39 +86,33 @@ struct WalkthroughContentView2: View {
             VStack(spacing: 20) {
                 
                 HStack {
-
+                    
                     if currrentPage == 1{
-
+                        
                         Text("Hello!".localized(language)).font(.title).fontWeight(.semibold).kerning(1.4)
                     }
                     
                     else {
                         Button(action: {
                                 withAnimation(.easeInOut){ currrentPage -= 1 }}, label: {
-                            Text("Back".localized(language)).fontWeight(.semibold).kerning(1.2).padding(.vertical, 10)
-                        })
+                                    Text("Back".localized(language)).fontWeight(.semibold).kerning(1.2).padding(.vertical, 10)
+                                })
                     }
-
+                    
                     Spacer()
-
+                    
                     Button(action: {
                             withAnimation(.easeInOut){self.presentationMode.wrappedValue.dismiss()}}, label: {
                                 Text("Skip".localized(language)).fontWeight(.semibold).kerning(1.2)
-                    })
+                            })
                     
                 }
                 .foregroundColor(Color("customBlack")).padding()
-
                 
-//                Spacer(minLength: 0)
+                
                 
                 Image(image).resizable().aspectRatio(contentMode: .fit)
-//                Image("page1")
-//                    .resizable()
-//                  .scaledToFill()
-//                    .frame(alignment: .center)
-//                  .clipped()
-//                  .padding(.bottom)
+                
                 
                 Text(title).font(.title)
                     .fontWeight(.bold)

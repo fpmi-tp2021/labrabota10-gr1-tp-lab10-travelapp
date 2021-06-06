@@ -17,7 +17,7 @@ struct SettingView: View {
     @State var isPresented5 = false
     @AppStorage("language")
     private var language = LocalizationService.shared.language
-
+    
     
     var body: some View {
         NavigationView {
@@ -33,7 +33,7 @@ struct SettingView: View {
                     }.fullScreenCover(isPresented: $isPresented5, content: {
                         LanguageView()
                     })
-                   
+                    
                 }
                 Section {
                     Button(action: {
@@ -65,7 +65,7 @@ struct SettingView: View {
                     }.fullScreenCover(isPresented: $isPresented2, content: {
                         ReportView()
                     })
-                   
+                    
                 }
                 
                 

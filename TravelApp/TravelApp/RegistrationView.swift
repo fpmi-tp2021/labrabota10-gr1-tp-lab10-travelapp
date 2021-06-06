@@ -11,7 +11,7 @@ import FirebaseAuth
 
 
 struct ContentView: View {
-
+    
     @AppStorage("language")
     private var language = LocalizationService.shared.language
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
@@ -118,7 +118,7 @@ struct SignIn : View {
                 Alert(title: Text("Error".localized(language)), message: Text(self.message), dismissButton: .default(Text("Ok")))
             }
             VStack{
-
+                
                 
                 HStack(spacing: 8){
                     

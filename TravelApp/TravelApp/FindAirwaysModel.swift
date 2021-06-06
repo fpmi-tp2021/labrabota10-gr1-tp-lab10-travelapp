@@ -44,7 +44,7 @@ extension AirwaysRequest
         
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
-
+        
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             
@@ -62,6 +62,8 @@ extension AirwaysRequest
                     let jsonData = String(decoding: data!, as: UTF8.self)
                     let response = try? JSONDecoder().decode(APIAirwaysResponse.self, from: jsonData.data(using: .utf8)!)
                     
+                    print(jsonData)
+                    
                     DispatchQueue.main.async {
                         
                         if response?.Carriers.count == 0 {
@@ -78,8 +80,8 @@ extension AirwaysRequest
         })
         
         dataTask.resume()
-        }
     }
+}
 
 
 struct APIAirwaysResponse : Decodable

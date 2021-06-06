@@ -12,10 +12,14 @@ class Database {
     
     func openDatabase() -> OpaquePointer? {
         
-        let fileURL = "/Users/adambokun/Documents/repos/labrabota10-gr1-travelapp/TravelApp/DB/airports.db"
+        let pathURL = URL(fileURLWithPath: #file)
+        let path = pathURL.deletingLastPathComponent()
+        var dbPath = path.absoluteString
+        dbPath += "DB/airports.db"
+        
         
         var db: OpaquePointer?
-        guard sqlite3_open(fileURL, &db) == SQLITE_OK else {
+        guard sqlite3_open(dbPath, &db) == SQLITE_OK else {
             
             print("error opening database")
             sqlite3_close(db)

@@ -29,32 +29,32 @@ struct ResultView: View {
             Text("Your choise".localized(language)).fontWeight(.heavy).font(.largeTitle).padding([.top,.bottom], 50)
             
             Group {
-           
+                
                 HotelCard(stars: 0, name: hotelName, distance: "", price: hotelPrice)
-                 
+                
                 AirwayCard(company: airwayCompany, price: airwayPrice)
-            
+                
             }.padding(.top, 30)
             
             Spacer()
             Spacer()
-            /*
+            
             Button(action: {
                 saveData(hotelName: hotelName, hotelPrice: hotelPrice, airwayCompany: airwayCompany, airwayPrice: airwayPrice.description)
                 
                 self.isPresented.toggle()
             }) {
                 
-                    
-                    Text("Submit").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
-                    
-                    
+                
+                Text("Submit").foregroundColor(.white).frame(width: UIScreen.main.bounds.width - 120).padding()
+                
+                
             }.fullScreenCover(isPresented: $isPresented, content: {
-                AccountView()
+                HomeView()
             }).background(Color("mainColor"))
-                .clipShape(Capsule())
-                .padding(.top, 45)
-            */
+            .clipShape(Capsule())
+            .padding(.top, 45)
+            
             Spacer()
         }
     }

@@ -24,12 +24,12 @@ struct ContactView: View {
             }
             
             HStack{
-            Text("Contact us".localized(language)).font(.title).fontWeight(.semibold).kerning(1.2)
+                Text("Contact us".localized(language)).font(.title).fontWeight(.semibold).kerning(1.2)
             }.frame(width: UIScreen.main.bounds.width - 50, height: 100, alignment: .center)
             
             
             VStack{
-                Text("Dzmitry Siemianovich").font(.title2).fontWeight(.semibold).kerning(1.2).multilineTextAlignment(.leading)
+                Text("Dzmitry Semianovich").font(.title2).fontWeight(.semibold).kerning(1.2).multilineTextAlignment(.leading)
                 Link("dima.semenovich@icloud.com", destination: URL(string: "mailto:dima.semenovich@icloud.com")!).font(.title3).multilineTextAlignment(.leading)
                 Link("@dimaS0611", destination: URL(string: "https://github.com/dimaS0611")!).font(.title3).multilineTextAlignment(.leading)
             }.frame(width: UIScreen.main.bounds.width - 50, height: 120)
@@ -49,15 +49,15 @@ struct ContactView: View {
             
             Spacer(minLength: 100)
             
-           
+            
         }
     }
-
+    
 }
 
 struct ContactView_Previews: PreviewProvider {
     static var previews: some View {
         ContactView()
-            
+        
     }
 }

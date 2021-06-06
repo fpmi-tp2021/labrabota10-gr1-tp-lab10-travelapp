@@ -29,9 +29,9 @@ class HotelRequest: ObservableObject
     let dateFormatter = DateFormatter()
     
     var headers = [
-    "x-rapidapi-key": "80af74aef4msh2e995b15f6f92a2p1e4da5jsna06f38eba433",
-    "x-rapidapi-host": "hotels-com-provider.p.rapidapi.com"
-]
+        "x-rapidapi-key": "80af74aef4msh2e995b15f6f92a2p1e4da5jsna06f38eba433",
+        "x-rapidapi-host": "hotels-com-provider.p.rapidapi.com"
+    ]
 }
 
 extension HotelRequest
@@ -65,52 +65,52 @@ extension HotelRequest
             }
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             
             let request = NSMutableURLRequest(url: NSURL(string: "https://hotels-com-provider.p.rapidapi.com/v1/hotels/nearby?locale=en_US&sort_order=STAR_RATING_HIGHEST_FIRST&latitude=\(self.latitude)&adults_number=\(self.adults)&checkout_date=\(self.checkOut)&currency=USD&checkin_date=\(self.checkIn)&longitude=\(self.longitude)&price_min=\(self.minPrice)&price_max=\(self.maxPrice)")! as URL,cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
-        
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = self.headers
-        
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             
-            if (error != nil) {
+            request.httpMethod = "GET"
+            request.allHTTPHeaderFields = self.headers
+            
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
                 
-                print(error as Any)
-                
-            } else {
-                
-                let httpResponse = response as? HTTPURLResponse
-                print(httpResponse as Any)
-                
-                do {
+                if (error != nil) {
                     
-                    let jsonData = String(decoding: data!, as: UTF8.self)
-                    let response = try! JSONDecoder().decode(APIResponse.self, from: jsonData.data(using: .utf8)!)
+                    print(error as Any)
                     
-                    guard (response.searchResults.results.count != 0) else {
-                        
-                        print("Failed")
-                        return
-                        
-                    }
+                } else {
                     
-                    DispatchQueue.main.async {
+                    let httpResponse = response as? HTTPURLResponse
+                    print(httpResponse as Any)
+                    
+                    do {
                         
-                        if response.searchResults.results.count == 0 {
-                            self.isEmpty = true
+                        let jsonData = String(decoding: data!, as: UTF8.self)
+                        let response = try! JSONDecoder().decode(APIResponse.self, from: jsonData.data(using: .utf8)!)
+                        
+                        guard (response.searchResults.results.count != 0) else {
+                            
+                            print("Failed")
+                            return
+                            
                         }
                         
-                        self.searchData = response.searchResults.results
-                        self.dataHasLoaded = true
-                        
+                        DispatchQueue.main.async {
+                            
+                            if response.searchResults.results.count == 0 {
+                                self.isEmpty = true
+                            }
+                            
+                            self.searchData = response.searchResults.results
+                            self.dataHasLoaded = true
+                            
+                        }
                     }
                 }
-            }
-        })
-        
-        dataTask.resume()
+            })
+            
+            dataTask.resume()
         }
     }
     

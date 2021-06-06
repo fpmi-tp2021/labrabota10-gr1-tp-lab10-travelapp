@@ -84,7 +84,7 @@ struct AirwaysTable : View {
             NavigationLink(
                 destination: ResultView(hotelName: name, hotelPrice: price, airwayCompany: carriers[i].Name, airwayPrice: quotes[i].MinPrice),
                 label: {
-                AirwayCard(company: carriers[i].Name, price: quotes[i].MinPrice)
+                    AirwayCard(company: carriers[i].Name, price: quotes[i].MinPrice)
                 })
             
         }.navigationBarTitleDisplayMode(.large)

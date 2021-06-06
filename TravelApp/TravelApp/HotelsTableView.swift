@@ -76,7 +76,7 @@ struct TableView: View {
         }.navigationBarTitle("\(city) hotels")
     }
     
-
+    
 }
 
 struct HotelsTableView_Previews: PreviewProvider {

@@ -17,11 +17,11 @@ struct HotelCard: View {
     @State var price : String
     
     var body: some View {
-       
+        
         HStack{
-
+            
             VStack(alignment: .leading) {
-               
+                
                 Text("\(name)").font(.title2).fontWeight(.regular).lineLimit(1).frame(maxWidth: .infinity, alignment: .leading).padding(.bottom, 1)
                 
                 HStack {
@@ -35,7 +35,7 @@ struct HotelCard: View {
                 Text("From city center \(distance)".localized(language)).font(.body).fontWeight(.light)
                 
                 Text("Price \(price)".localized(language)).font(.body).fontWeight(.light)
-
+                
             }
             
             

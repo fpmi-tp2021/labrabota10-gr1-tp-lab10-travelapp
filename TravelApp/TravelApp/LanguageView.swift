@@ -40,7 +40,7 @@ struct LanguageView: View {
                     })
                     
                     Button(action: {
-
+                        
                         LocalizationService.shared.language = .russian
                         
                         self.isPresented6.toggle()
@@ -51,7 +51,7 @@ struct LanguageView: View {
                     }.fullScreenCover(isPresented: $isPresented6, content: {
                         SettingView()
                     })
-                   
+                    
                 }
                 
             }.listStyle(GroupedListStyle())
@@ -76,15 +76,15 @@ struct LanguageView: View {
             
         }
     }
-
-
-
-
-
-
-struct LanguageView_Previews: PreviewProvider {
-    static var previews: some View {
-        LanguageView().preferredColorScheme(.light)
+    
+    
+    
+    
+    
+    
+    struct LanguageView_Previews: PreviewProvider {
+        static var previews: some View {
+            LanguageView().preferredColorScheme(.light)
+        }
     }
-}
 }

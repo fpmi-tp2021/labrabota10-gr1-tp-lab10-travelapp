@@ -17,6 +17,7 @@ struct GetOriginPlace: View {
     @AppStorage("language")
     private var language = LocalizationService.shared.language
     @StateObject var airwaysRequest = AirwaysRequestSettings()
+    
     @State var cityTo = ""
     @State var name = ""
     @State var price = ""
@@ -32,7 +33,7 @@ struct GetOriginPlace: View {
             Text("Let's find the best prices for plane!".localized(language)).fontWeight(.semibold)
                 .kerning(1.3)
                 .multilineTextAlignment(.center).padding()
-
+            
             
             Spacer()
             
