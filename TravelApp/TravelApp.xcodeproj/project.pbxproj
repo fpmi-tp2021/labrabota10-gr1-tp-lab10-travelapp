@@ -25,7 +25,7 @@
 		73F313C34736B7A2C0B485CB /* Pods_TravelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76DD6520AD4A58EEBDEBE5F2 /* Pods_TravelApp.framework */; };
 		D40322DA26662CF3002D604B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322D926662CF3002D604B /* AppDelegate.swift */; };
 		D40322DC26662CF3002D604B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322DB26662CF3002D604B /* SceneDelegate.swift */; };
-		D40322DE26662CF3002D604B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322DD26662CF3002D604B /* ContentView.swift */; };
+		D40322DE26662CF3002D604B /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40322DD26662CF3002D604B /* RegisterView.swift */; };
 		D40322E126662CF3002D604B /* TravelApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D40322DF26662CF3002D604B /* TravelApp.xcdatamodeld */; };
 		D40322E326662CF5002D604B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40322E226662CF5002D604B /* Assets.xcassets */; };
 		D40322E626662CF5002D604B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D40322E526662CF5002D604B /* Preview Assets.xcassets */; };
@@ -83,7 +83,7 @@
 		D40322D626662CF3002D604B /* TravelApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D40322D926662CF3002D604B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D40322DB26662CF3002D604B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D40322DD26662CF3002D604B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D40322DD26662CF3002D604B /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		D40322E026662CF3002D604B /* TravelApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TravelApp.xcdatamodel; sourceTree = "<group>"; };
 		D40322E226662CF5002D604B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D40322E526662CF5002D604B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 				D47A22902667856D00D15E06 /* FindHotelsModel.swift */,
 				D4C09F4126689E9000F95267 /* HotelsTableView.swift */,
 				D40322DB26662CF3002D604B /* SceneDelegate.swift */,
-				D40322DD26662CF3002D604B /* ContentView.swift */,
+				D40322DD26662CF3002D604B /* RegisterView.swift */,
 				D40322E226662CF5002D604B /* Assets.xcassets */,
 				D40322E726662CF5002D604B /* LaunchScreen.storyboard */,
 				D40322EA26662CF5002D604B /* Info.plist */,
@@ -429,7 +429,7 @@
 				4520E4C9266B3A820012537F /* GetOriginPlace.swift in Sources */,
 				D40322DC26662CF3002D604B /* SceneDelegate.swift in Sources */,
 				D4770E18266642A70013B80F /* HomeView.swift in Sources */,
-				D40322DE26662CF3002D604B /* ContentView.swift in Sources */,
+				D40322DE26662CF3002D604B /* RegisterView.swift in Sources */,
 				457FDA28266ABAD2007F0126 /* WalkthroughView2.swift in Sources */,
 				45F8D547266ADB93008545EB /* String.swift in Sources */,
 				4520E4DD266B3A9F0012537F /* FindAirwaysModel.swift in Sources */,
